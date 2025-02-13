@@ -1,92 +1,54 @@
 body {
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #000;
+    background: black;
     margin: 0;
 }
-
 .calculator {
-    background: #1C1C1C;
     width: 320px;
-    padding: 20px;
+    background: black;
     border-radius: 30px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-
 #display {
     width: 100%;
     height: 80px;
-    font-size: 2.5rem;
-    text-align: right;
-    border: none;
-    background-color: #000;
+    background: black;
     color: white;
+    text-align: right;
+    font-size: 2em;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
     padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 15px;
 }
-
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
-
 button {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.5em;
     border: none;
+    outline: none;
     cursor: pointer;
-    transition: 0.2s;
 }
-
-button:hover {
-    opacity: 0.8;
-}
-
-/* Number buttons */
-button:not(.operator, .special) {
-    background: #505050;
-    color: white;
-}
-
-/* Operator buttons */
-.operator {
-    background: #FF9500;
-    color: white;
-}
-
-/* Special function buttons */
 .special {
-    background: #D4D4D2;
+    background: #a5a5a5;
     color: black;
 }
-
-/* Zero button (spanning two columns) */
+.operator {
+    background: #ff9f0a;
+    color: white;
+}
 .zero {
     grid-column: span 2;
     width: 150px;
     border-radius: 35px;
 }
-
-/* Responsive Design */
-@media (max-width: 400px) {
-    .calculator {
-        width: 280px;
-    }
-    button {
-        width: 60px;
-        height: 60px;
-        font-size: 1.3rem;
-    }
-    .zero {
-        width: 130px;
-    }
-}
-
