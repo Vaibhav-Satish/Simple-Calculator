@@ -9,7 +9,7 @@ function clearDisplay() {
 function calculateResult() {
     try {
         document.getElementById("display").value = eval(document.getElementById("display").value);
-    } catch {
+    } catch (e) {
         document.getElementById("display").value = "Error";
     }
 }
@@ -20,3 +20,4 @@ function toggleSign() {
         display.value = parseFloat(display.value) * -1;
     }
 }
+
