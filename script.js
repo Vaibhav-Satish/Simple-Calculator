@@ -13,3 +13,10 @@ function calculateResult() {
         document.getElementById("display").value = "Error";
     }
 }
+
+function toggleSign() {
+    let display = document.getElementById("display");
+    if (display.value) {
+        display.value = parseFloat(display.value) * -1;
+    }
+}
